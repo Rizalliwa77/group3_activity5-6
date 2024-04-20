@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import Post from './components/Post'
 import Error404 from './components/Error404';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               <Route path="/sign-up" element={user ? <Navigate to="/" /> : <SignUp />} />
               {/* Route for sign in page */}
               <Route path="/sign-in" element={user ? <Navigate to="/" /> : <SignIn />} />
+              <Route path="/" element={user ? <Post /> : <Navigate to="/sign-in" />} />
               
               <Route path="*" element={<Error404 />} />
             </Routes>

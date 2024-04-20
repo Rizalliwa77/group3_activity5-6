@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { auth } from '../configs/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
+
 function SignUp() {
+
   // State variables to store error message, email, and password
   const [errorMessage, setErrorMessage] = useState('');
   const [email, setEmail] = useState('');
@@ -23,6 +25,7 @@ function SignUp() {
       // Clear email and password fields after successful sign up
       setEmail('');
       setPassword('');
+   
     } catch (error) {
       // Handle specific error cases
       if (error.code === 'auth/email-already-in-use') {
