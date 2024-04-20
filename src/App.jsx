@@ -42,7 +42,6 @@ function App() {
               {/* Route for sign in page */}
               <Route path="/sign-in" element={user ? <Navigate to="/" /> : <SignIn />} />
               <Route path="/" element={user ? <Post /> : <Navigate to="/sign-in" />} />
-              
               <Route path="*" element={<Error404 />} />
             </Routes>
           </Router>
