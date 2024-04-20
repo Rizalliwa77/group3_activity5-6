@@ -47,14 +47,14 @@ function ChatRoomList() {
 
   return (
     <>
-      <h1>Chat Room List</h1>
+      <h1>Post List</h1>
       <input
         type='text'
-        placeholder='Title'
+        placeholder='Write a post'
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button onClick={save}>Save</button>
+      <button onClick={save}>Post</button>
       {
         list.map((item, index) => (
           item.timestamp ? <div key={index}>
